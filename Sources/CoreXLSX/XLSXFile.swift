@@ -59,7 +59,7 @@ public class XLSXFile {
   /// span more than a few lines.
   public init?(
     filepath: String,
-    bufferSize: UInt32 = 10 * 1024 * 1024,
+    bufferSize: Int = 10 * 1024 * 1024,
     errorContextLength: UInt = 0
   ) {
     let archiveURL = URL(fileURLWithPath: filepath)
@@ -84,7 +84,7 @@ public class XLSXFile {
   /// around that location of specified length.
   public init(
     data: Data,
-    bufferSize: UInt32 = 10 * 1024 * 1024,
+    bufferSize: Int = 10 * 1024 * 1024,
     errorContextLength: UInt = 0
   ) throws {
     guard let archive = Archive(data: data, accessMode: .read)
