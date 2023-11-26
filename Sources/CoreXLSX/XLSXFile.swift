@@ -42,7 +42,7 @@ public class XLSXFile {
   }()
 
   /// Buffer size passed to `archive.extract` call
-  private let bufferSize: UInt32
+  private let bufferSize: Int
 
   /// - Parameters:
   ///   - filepath: path to the `.xlsx` file to be processed.
